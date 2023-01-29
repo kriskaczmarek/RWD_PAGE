@@ -2,8 +2,28 @@
 	--myColor: #0099dd;
 }
 body {
+	margin: 0;
 	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
 		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+.btnBanner {
+	display: block;
+	max-width: fit-content;
+	padding: 1rem 1.6rem;
+	background-color: rgb(216, 13, 13);
+	color: #fff;
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+.btnBanner:hover {
+    background: none;
+    border: 1px solid brown;
+	text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
 }
 #logolink {
 	display: block;
@@ -18,7 +38,7 @@ header > a > img {
 	width: 290px;
 	height: 250px;
 }
-/* ---MENU--- */
+/* --------------MENU-------------- */
 .topnav {
 	text-align: center;
 }
@@ -40,7 +60,38 @@ header > a > img {
 .topnav .mobileMenuIcon {
 	display: none;
 }
+/* --------------MENU-------------- */
+/* --------------BANER-------------- */
+.baner {
+	display: flex;
+	align-items: center;
+	min-height: 600px;
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+		url(./images/creative.jpg) no-repeat;
+	background-size: cover;
+}
+.baner h1 {
+	font-size: 4rem;
+	font-weight: 700;
+	color: #fff;
+}
+.baner .container {
+	padding: 2rem;
+}
+.baner h3 {
+	font-size: 2rem;
+	font-weight: 500;
+	color: #fff;
+}
+
+/* --------------BANER-------------- */
+
+/* --------------MEDIA-------------- */
 @media screen and (max-width: 760px) {
+	/* --------------MENU-------------- */
+	header > hr {
+		display: none;
+	}
 	.topnav {
 		text-align: left;
 	}
@@ -51,14 +102,14 @@ header > a > img {
 		display: block;
 		float: right;
 	}
-    .topnav.responsive{
-        position: relative;
-    }
-    .topnav.responsive a.mobileMenuIcon{
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
+	.topnav.responsive {
+		position: relative;
+	}
+	.topnav.responsive a.mobileMenuIcon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
 	.topnav.responsive a {
 		display: block;
 		text-align: left;
@@ -70,5 +121,15 @@ header > a > img {
 	header > a > img {
 		width: 50vw+10%;
 	}
+	/* --------------MENU-------------- */
+
+	/* --------------BANER-------------- */
+
+	.baner h1 {
+		font-size: 12vw;
+	}
+	.baner h3 {
+		font-size: 7vw;
+	}
+	/* --------------BANER-------------- */
 }
-/* ---MENU--- */ ;
