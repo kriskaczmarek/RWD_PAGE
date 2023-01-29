@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First web page</title>
+    <script src="https://kit.fontawesome.com/c232add5d5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <header>
+        <a href="index.html" id="logolink"><img src="./images/brain.jpg" alt="logo"></a>
+        <hr>
+        <nav class="topnav" id="myTopNav">
+            <a href="index.html">Main site</a>
+            <a href="index.html">About us</a>
+            <a href="index.html">Services</a>
+            <a href="index.html">Contact</a>
+            <a href="javascript:void(0)" class="mobileMenuIcon" onclick="myfunction()"><i
+                    class="fa-solid fa-bars"></i></a>
+        </nav>
+    </header>
+
+    <script>
+        function myfunction() {
+            const nav = document.querySelector("#myTopNav")
+            if (nav.className === "topnav") {
+                nav.className += " responsive"
+            }
+            else {
+                nav.className = "topnav"
+            }
+        }
+    </script>
 </body>
+
 </html>

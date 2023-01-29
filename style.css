@@ -1,0 +1,74 @@
+:root {
+	--myColor: #0099dd;
+}
+body {
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#logolink {
+	display: block;
+	text-align: center;
+}
+header > hr {
+	width: 90%;
+	height: 2px;
+	background: var(--myColor);
+}
+header > a > img {
+	width: 290px;
+	height: 250px;
+}
+/* ---MENU--- */
+.topnav {
+	text-align: center;
+}
+.topnav a {
+	display: inline-block;
+	padding: 1rem 1.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--myColor);
+}
+.topnav a:hover {
+	background-color: var(--myColor);
+	color: #fff;
+}
+.topnav .mobileMenuIcon {
+	display: none;
+}
+@media screen and (max-width: 760px) {
+	.topnav {
+		text-align: left;
+	}
+	.topnav a:not(:first-child) {
+		display: none;
+	}
+	.topnav a.mobileMenuIcon {
+		display: block;
+		float: right;
+	}
+    .topnav.responsive{
+        position: relative;
+    }
+    .topnav.responsive a.mobileMenuIcon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+	.topnav.responsive a {
+		display: block;
+		text-align: left;
+		float: none;
+	}
+}
+
+@media screen and (max-width: 340px) {
+	header > a > img {
+		width: 50vw+10%;
+	}
+}
+/* ---MENU--- */ ;
