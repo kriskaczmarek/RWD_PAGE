@@ -21,8 +21,8 @@ body {
 	text-decoration: none;
 }
 .btnBanner:hover {
-    background: none;
-    border: 1px solid brown;
+	background: none;
+	border: 1px solid brown;
 	text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
 }
 #logolink {
@@ -69,6 +69,7 @@ header > a > img {
 	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
 		url(./images/creative.jpg) no-repeat;
 	background-size: cover;
+	background-position: center;
 }
 .baner h1 {
 	font-size: 4rem;
