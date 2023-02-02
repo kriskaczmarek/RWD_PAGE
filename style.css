@@ -1,5 +1,6 @@
 :root {
-	--myColor: #0099dd;
+	--myColor: #85848a;
+	--backgroundColor: #c3c3d1;
 }
 body {
 	margin: 0;
@@ -40,6 +41,7 @@ header > a > img {
 }
 /* --------------MENU-------------- */
 .topnav {
+	margin-bottom: 0.5rem;
 	text-align: center;
 }
 .topnav a {
@@ -87,6 +89,26 @@ header > a > img {
 
 /* --------------BANER-------------- */
 
+/* --------------MAIN-------------- */
+main {
+	background: var(--backgroundColor);
+}
+main .container {
+	display: flex;
+}
+.mainItem {
+	padding: 1rem;
+	margin: 1rem 0.5rem;
+	background: white;
+}
+main .container #mainColumn {
+	flex: 70vw;
+}
+main .container #mainAside {
+	flex: 30vw;
+}
+/* --------------MAIN-------------- */
+
 /* --------------MEDIA-------------- */
 @media screen and (max-width: 760px) {
 	/* --------------MENU-------------- */
@@ -116,6 +138,15 @@ header > a > img {
 		text-align: left;
 		float: none;
 	}
+	main .container {
+		flex-direction: column;
+	}
+	main .container #mainColumn {
+		flex: auto;
+	}
+	main .container #mainAside {
+		flex: auto;
+	}
 }
 
 @media screen and (max-width: 340px) {
@@ -133,4 +164,8 @@ header > a > img {
 		font-size: 7vw;
 	}
 	/* --------------BANER-------------- */
+
+	/* --------------MAIN-------------- */
+
+	/* --------------MAIN-------------- */
 }
