@@ -12,7 +12,7 @@ body {
 	width: 100%;
 	max-width: 1200px;
 }
-.btnBanner {
+.btn {
 	display: block;
 	max-width: fit-content;
 	padding: 1rem 1.6rem;
@@ -21,7 +21,7 @@ body {
 	font-size: 1.2rem;
 	text-decoration: none;
 }
-.btnBanner:hover {
+.btn:hover {
 	background: none;
 	border: 1px solid brown;
 	text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
@@ -97,9 +97,24 @@ main .container {
 	display: flex;
 }
 .mainItem {
+	position: relative;
 	padding: 1rem;
 	margin: 1rem 0.5rem;
 	background: white;
+}
+.containerFoto{	
+	position: absolute;
+	top:1rem;
+	left: 1rem;
+	display: flex;
+}
+.btnImg{
+	margin: 1rem;	
+	max-width: fit-content;
+	padding: 0.3rem .7rem;
+	background-color: rgb(216, 13, 13);
+	color: #fff;
+	text-decoration: none;
 }
 main .container #mainColumn {
 	flex: 70vw;
@@ -108,6 +123,49 @@ main .container #mainAside {
 	flex: 30vw;
 }
 /* --------------MAIN-------------- */
+/* --------------ARTICLE-------------- */
+.articleThumbnail {
+	display: block;
+	width: 100%;
+}
+.entryMeta {
+	padding: 1rem 0;
+}
+.entryMeta a {
+	text-decoration: none;
+	color: rgb(221, 59, 59);
+}
+.fa-my-class {
+	position: relative;
+	bottom: 0.2rem;
+	padding: 0 0.2rem;
+	font-size: 0.3rem;
+}
+article h2 a {
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 2rem;
+	line-height: 1.4;
+	font-style: italic;
+	color: var(--myColor);
+}
+article p {
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	color: #222;
+}
+.entryFooter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 1rem;
+}
+.share-icons a {
+	letter-spacing: 1rem;
+	font-size: 1.2rem;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+/* --------------ARTICLE-------------- */
 
 /* --------------MEDIA-------------- */
 @media screen and (max-width: 760px) {
@@ -138,6 +196,8 @@ main .container #mainAside {
 		text-align: left;
 		float: none;
 	}
+	/* --------------MAIN-------------- */
+
 	main .container {
 		flex-direction: column;
 	}
@@ -147,6 +207,14 @@ main .container #mainAside {
 	main .container #mainAside {
 		flex: auto;
 	}
+	/* --------------MAIN-------------- */
+	/* --------------ARTICLE-------------- */
+	.entryFooter {
+		flex-direction: column-reverse;
+		row-gap: 1rem;
+		text-align: center;
+	}
+	/* --------------ARTICLE-------------- */
 }
 
 @media screen and (max-width: 340px) {
@@ -164,8 +232,4 @@ main .container #mainAside {
 		font-size: 7vw;
 	}
 	/* --------------BANER-------------- */
-
-	/* --------------MAIN-------------- */
-
-	/* --------------MAIN-------------- */
 }
