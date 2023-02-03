@@ -1,6 +1,7 @@
 :root {
 	--myColor: #85848a;
 	--backgroundColor: #c3c3d1;
+	--btnColor: rgb(216, 13, 13);
 }
 body {
 	margin: 0;
@@ -16,13 +17,14 @@ body {
 	display: block;
 	max-width: fit-content;
 	padding: 1rem 1.6rem;
-	background-color: rgb(216, 13, 13);
+	background-color: var(--btnColor);
 	color: #fff;
 	font-size: 1.2rem;
 	text-decoration: none;
 }
 .btn:hover {
 	background: none;
+	color: var(--btnColor);
 	border: 1px solid brown;
 	text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
 }
@@ -102,19 +104,24 @@ main .container {
 	margin: 1rem 0.5rem;
 	background: white;
 }
-.containerFoto{	
+.containerFoto {
 	position: absolute;
-	top:1rem;
+	top: 1rem;
 	left: 1rem;
 	display: flex;
 }
-.btnImg{
-	margin: 1rem;	
+.btnImg {
+	margin: 1rem;
 	max-width: fit-content;
-	padding: 0.3rem .7rem;
-	background-color: rgb(216, 13, 13);
+	padding: 0.3rem 0.7rem;
+	background-color: var(--btnColor);
 	color: #fff;
 	text-decoration: none;
+}
+.btnImg:hover {
+	color: white;
+	background: none;
+	border: 1px solid white;
 }
 main .container #mainColumn {
 	flex: 70vw;
@@ -167,6 +174,95 @@ article p {
 
 /* --------------ARTICLE-------------- */
 
+/* --------------ASIDE-------------- */
+.quote {
+	text-align: center;
+	background-color: var(--btnColor);
+	color: #fff;
+}
+.quote p:nth-child(1) {
+	font-size: 1.2rem;
+	font-style: italic;
+}
+.quote p:nth-child(2) {
+	font-size: 0.8rem;
+}
+.mainItem h4 {
+	text-transform: uppercase;
+	color: var(--myColor);
+}
+.mainItem.tags a {
+	display: inline-block;
+	padding: 0.6rem 1rem;
+	margin: 0.2rem 0.1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: #ccc;
+	color: black;
+}
+.mainItem.recentComments ul {
+	margin: 0;
+	padding: 0;
+}
+.mainItem.recentComments ul li {
+	position: relative;
+	padding: 1rem 0;
+	list-style-type: none;
+}
+.mainItem.recentComments ul li span {
+	color: var(--btnColor);
+}
+.mainItem.recentComments ul li a {
+	display: block;
+	padding-top: 0.3rem;
+	font-size: 1.2rem;
+	font-style: italic;
+	text-decoration: none;
+	color: #444;
+}
+.mainItem.recentComments ul li span::before {
+	content: "\2014";
+	padding-right: 0.3rem;
+	color: #000;
+}
+.mainItem.recentComments ul li:not(:last-child)::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+
+.mainItem.categories ul{
+	margin: 0;
+	padding: 0;
+}
+.mainItem.categories ul li{
+	position: relative;
+	padding: 1rem 0;
+	margin: 1rem 0;
+	list-style-type: none;
+}
+.mainItem.categories ul li a{
+	text-decoration: none;
+	color: #000;
+}
+.mainItem.categories ul li::before{
+	content: "\25B6";
+	padding-right: 0.3rem;
+}
+.mainItem.categories ul li:not(:last-child)::after{
+	content:"";
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+
+/* --------------ASIDE-------------- */
+
 /* --------------MEDIA-------------- */
 @media screen and (max-width: 760px) {
 	/* --------------MENU-------------- */
@@ -215,6 +311,9 @@ article p {
 		text-align: center;
 	}
 	/* --------------ARTICLE-------------- */
+	/* --------------ASIDE-------------- */
+
+	/* --------------ASIDE-------------- */
 }
 
 @media screen and (max-width: 340px) {
