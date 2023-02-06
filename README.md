@@ -13,4 +13,6 @@ Project is created with:
 * JS
 	
 ## Setup
+See page by link:
+https://kriskaczmarek.github.io/RWD_PAGE/
 
